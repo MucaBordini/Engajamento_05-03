@@ -1,4 +1,4 @@
-package org.example;
+/*package org.example;
 
 public class Aluno {
 
@@ -15,4 +15,4 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
-}
+}*/

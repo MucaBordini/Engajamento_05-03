@@ -1,17 +1,17 @@
 package org.example;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+//import java.lang.reflect.Array;
+//import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+//mport java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
 
 public class App {
 
-    private static Scanner sc = new Scanner(System.in);
-    private static Set<Aluno> listaAlunos = new HashSet<>();
+    private static final Scanner sc = new Scanner(System.in);
+    private static final Set<String> listaAlunos = new HashSet<>();
 
     public static void main(String[] args) {
 
@@ -44,25 +44,28 @@ public class App {
         System.out.println("Insira o nome: ");
         String nome = sc.nextLine();
 //        if(verificaNomeExistente(nome)){
-        listaAlunos.add(new Aluno(nome));
+        listaAlunos.add(nome);
 //        }else{
 //            System.out.println("\n#### NOME JA CADASTRADO ####\n");
 //        }
     }
 
-    private static boolean verificaNomeExistente(String nome){
-        for (Aluno aluno : listaAlunos){
+   /* private static boolean verificaNomeExistente(String nome){
+        for (String aluno : listaAlunos){
             if (aluno.getNome().equals(nome)){
                 return false;
             }
         }
         return true;
-    }
+    }*/
 
     private static void exibirLista() {
         System.out.println("----- Lista de nomes -----");
-        for (Aluno aluno : listaAlunos){
-            System.out.println(aluno.getNome());
+        listaAlunos.forEach(alunos -> {
+            System.out.println(alunos);
+        });
+        for (String aluno : listaAlunos){
+            System.out.println(aluno);
         }
     }
 }
