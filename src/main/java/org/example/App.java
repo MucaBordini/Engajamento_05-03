@@ -34,7 +34,7 @@ public class App {
                     exibirLista();
                     break;
                 case "0":
-                    exibirLista();
+                    // exibirLista();
                     break;
             }
         } while (!option.equals("0"));
@@ -50,6 +50,7 @@ public class App {
 //        }
     }
 
+   // Removido verficação de Aluno repetido, pois está utilizando HashSet
    /* private static boolean verificaNomeExistente(String nome){
         for (String aluno : listaAlunos){
             if (aluno.getNome().equals(nome)){
@@ -61,9 +62,6 @@ public class App {
 
     private static void exibirLista() {
         System.out.println("----- Lista de nomes -----");
-        listaAlunos.forEach(alunos -> {
-            System.out.println(alunos);
-        });
         for (String aluno : listaAlunos){
             System.out.println(aluno);
         }
