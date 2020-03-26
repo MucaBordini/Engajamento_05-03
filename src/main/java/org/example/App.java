@@ -62,8 +62,9 @@ public class App {
 
     private static void exibirLista() {
         System.out.println("----- Lista de nomes -----");
-        for (String aluno : listaAlunos){
+        listaAlunos.forEach(System.out::println);
+        /*for (String aluno : listaAlunos){
             System.out.println(aluno);
-        }
+        }*/
     }
 }
